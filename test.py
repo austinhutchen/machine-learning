@@ -26,14 +26,16 @@ def get_label_indices(labels):
 
 if __name__ == "__main__":
     # training set x ( think of as rows/m in mxn matrix)
-    x_train = np.array([[0, 1, 1],
+    x_train = np.array([
+                      [0, 1, 1],
                        [0, 0, 1],
                        [0, 0, 0],
-                       [1, 1, 0]])
+                       [1, 1, 0]
+                       ])
     # training set y (think of as columns or variabls in mxn matrix.)
     y_train = ['T', 'N', 'Y', 'Y']
     # test set
-    x_test = np.array([1, 1, 0])
+    x_test = np.array([[1, 1, 0]])
     clf = BernoulliNB(alpha=1.0, fit_prior=True)
     clf.fit(x_train, y_train)
     prediction = clf.predict_proba(x_test)
