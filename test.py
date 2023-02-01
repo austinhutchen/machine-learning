@@ -39,4 +39,6 @@ if __name__ == "__main__":
     clf = BernoulliNB(alpha=1.0, fit_prior=True)
     clf.fit(x_train, y_train)
     prediction = clf.predict_proba(x_test)
-    print("Prediction:", prediction)
+    labels_indices = get_label_indices(y_train)
+    print('Label Indices: ', labels_indices, '\n')
+    print("Prediction:", prediction, '\n')
