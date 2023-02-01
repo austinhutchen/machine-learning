@@ -27,11 +27,11 @@ def get_label_indices(labels):
 if __name__ == "__main__":
     # training set x ( think of as rows/m in mxn matrix)
     x_train = np.array([
-                      [0, 1, 1],
-                       [0, 0, 1],
-                       [0, 0, 0],
-                       [1, 1, 0]
-                       ])
+        [0, 1, 1],
+        [0, 0, 1],
+        [0, 0, 0],
+        [1, 1, 0]
+    ])
     # training set y (think of as columns or variabls in mxn matrix.)
     y_train = ['T', 'N', 'Y', 'Y']
     # test set
