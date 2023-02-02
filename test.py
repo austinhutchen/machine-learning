@@ -36,8 +36,7 @@ def get_likelihood(features, label_indices, smoothing=0):
     for label, indices in label_indices.items():
         likelihood[label] = features[indices, :].sum(axis=0) + smoothing
         total_count = len(indices)
-        likelihood[label] = likelihood[label] / \
-            (total_count + 2 * smoothing)
+        likelihood[label] = likelihood[label] / (total_count + 2 * smoothing)
     return likelihood
 
 
